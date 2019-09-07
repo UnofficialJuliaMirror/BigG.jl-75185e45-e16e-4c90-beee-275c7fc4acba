@@ -9,7 +9,7 @@ Inspired by [this post](https://blog.thea.codes/a-small-static-site-generator/).
 
 ## Installation
 
-The package is not yet registered in `METADATA.jl` and can be installed with `Pkg.add`, or in `REPL` by pressing `] add Telegrambot`.
+The package is not yet registered in `METADATA.jl` and can be installed with `Pkg.add`, or in `REPL` by pressing:
 ```julia
 julia> Pkg.add("https://github.com/Moelf/BigG.jl")
 ```
