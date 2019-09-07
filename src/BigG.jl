@@ -35,7 +35,7 @@ end
 
 # renders all .md files using a template from tpl path to output directory
 function render_posts(md_folder, output_folder, tplpath)
-    Threads.@threads for md_fname in readdir(md_folder)
+    for md_fname in readdir(md_folder)
         if occursin(".md", md_fname)
             out_fname = replace(md_fname, "md" => "html")
             open("$output_folder/$out_fname", "w") do f
