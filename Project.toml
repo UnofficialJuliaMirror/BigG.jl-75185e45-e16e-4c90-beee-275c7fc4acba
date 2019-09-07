@@ -1,0 +1,9 @@
+name = "BigG"
+uuid = "75185e45-e16e-4c90-beee-275c7fc4acba"
+authors = ["zz "]
+version = "0.1.0"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Mustache = "ffc61752-8dc7-55ee-8c37-f3e9cdd09e70"
+YAML = "ddb6d928-2868-570f-bddf-ab3f9cf99eb6"
