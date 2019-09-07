@@ -2,6 +2,7 @@
 A minimalistic Static Site Generator in Julia
 Inspired by [this post](https://blog.thea.codes/a-small-static-site-generator/).
 
+Demo can be found [here](https://github.com/Moelf/BigG_demo)
 
 <!-- | **Build Status**                                                                                |
 |:-----------------------------------------------------------------------------------------------:|
