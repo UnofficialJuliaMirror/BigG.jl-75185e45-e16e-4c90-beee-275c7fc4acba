@@ -23,6 +23,9 @@ using BigG
 render_posts("./source", "./output", "BigG.jl/src/post.hbs")
 render_index("./source", "./output", "BigG.jl/src/index.hbs")
 ```
+`"BigG.jl/src/post.hbs"` is a provided template, you can change templates as you want, at the moment only `{{{content}}}`
+in posts are used. Index render uses `{{#:posts}}` `{{/:posts}}` for loop and in between are `{{bname}}` and `{{title}}` for link
+generation.
 
 This will generate an `index.html` where each `.md` will be rendered into a html and
 linked in the index page.
