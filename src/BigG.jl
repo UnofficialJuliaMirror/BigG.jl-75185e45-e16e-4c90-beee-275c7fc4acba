@@ -23,23 +23,35 @@ function front_body(mdpath)
     return front_text, body_text
 end
 
-function md2html(mdpath, tplpath)
+function md2html(mdpath, tplpath, head_injection="")
     # render a .md file to .html using template, fill in the {{{content}}}
     front_text, body_text = front_body(mdpath)
     meta_data = YAML.load(front_text)
     html_txt = body_text |> Markdown.parse |> html
-    render_data = merge(meta_data, Dict("content" => html_txt))
+
+    render_data = merge(meta_data, Dict("content" => html_txt,
+                                        "head_injection" => head_injection
+                                        )
+                        )
     tpl = read(tplpath) |> String
     return render(tpl, render_data)
 end
 
 # renders all .md files using a template from tpl path to output directory
-function render_posts(md_folder, output_folder, tplpath)
+function render_posts(md_folder, output_folder, tplpath, head_path="")
+    head_injection = ""
+    if head_path!=""
+        head_injection = read(head_path) |> String
+    end
     for md_fname in readdir(md_folder)
         if occursin(".md", md_fname)
             out_fname = replace(md_fname, "md" => "html")
             open("$output_folder/$out_fname", "w") do f
-                write(f, md2html("$md_folder/$md_fname", tplpath))
+                write(f, md2html("$md_folder/$md_fname",
+                                tplpath,
+                                head_injection
+                                )
+                      )
             end
         end
     end

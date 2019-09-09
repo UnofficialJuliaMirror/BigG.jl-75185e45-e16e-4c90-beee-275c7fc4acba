@@ -15,3 +15,8 @@ end
 ```
 
 ![](https://www.w3schools.com/w3css/img_lights.jpg)
+
+When ``a \ne 0``
+```math
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}.
+```
