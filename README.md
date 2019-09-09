@@ -33,3 +33,4 @@ linked in the index page.
 
 ## To-Do
 - [ ] Allow directory structure (year/month/date/title.html)
+- [ ] Generate RSS feed
