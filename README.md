@@ -34,3 +34,4 @@ linked in the index page.
 ## To-Do
 - [ ] Allow directory structure (year/month/date/title.html)
 - [ ] Generate RSS feed
+- [ ] Use a .yaml config files for website meta data (title, base domain, author, etc)
