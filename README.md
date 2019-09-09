@@ -2,6 +2,7 @@
 A minimalistic Static Site Generator in Julia
 Inspired by [this post](https://blog.thea.codes/a-small-static-site-generator/).
 
+Demo can be found [here](https://github.com/Moelf/BigG_demo)
 
 <!-- | **Build Status**                                                                                |
 |:-----------------------------------------------------------------------------------------------:|
@@ -32,3 +33,5 @@ linked in the index page.
 
 ## To-Do
 - [ ] Allow directory structure (year/month/date/title.html)
+- [ ] Generate RSS feed
+- [ ] Use a .yaml config files for website meta data (title, base domain, author, etc)
