@@ -11,9 +11,9 @@ Markdown rendering is handled by Julia `stdlib`, docs [here](https://pkg.juliala
 
 ## Installation
 
-The package is not yet registered in `METADATA.jl` and can be installed with `Pkg.add`, or in `REPL` by pressing:
+The package is not yet registered in `METADATA.jl` and can be installed with `Pkg.add`, or in `REPL` by pressing `]`:
 ```julia
-julia> Pkg.add("https://github.com/Moelf/BigG.jl")
+pkg> add https://github.com/Moelf/BigG.jl
 ```
 
 ## Basic Usage
