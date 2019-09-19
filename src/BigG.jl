@@ -67,10 +67,10 @@ function render_index(md_folder, output_folder, tplpath)
         end
         front_text, _ = front_body("$md_folder/$md_fname")
         front_matter = YAML.load(front_text)
-        try
-            date = front_matter["date_published"]
+        date = try
+            front_matter["date_published"]
         catch
-            date = front_matter["date"]
+            front_matter["date"]
         end
         title = front_matter["title"]
         push!(dates, date)
