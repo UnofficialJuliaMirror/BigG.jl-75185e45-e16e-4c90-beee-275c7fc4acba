@@ -42,7 +42,6 @@ function render_all(md_Dir, output_Dir, post_Tpl, index_Tpl; head_path="")
                             )
         push!(htmls, render(post_tpl, render_dict))
 
-        # symbol manipulation, jank 1000
         try
             push!(titles, front_matter["title"])
             push!(slugs, front_matter["slug"])
@@ -58,7 +57,7 @@ function render_all(md_Dir, output_Dir, post_Tpl, index_Tpl; head_path="")
         Y, M, D = pub_day |> year, pub_day |> month, pub_day |> day
         dest_Dir = output_Dir * "/$Y/$M/$D/"
         ispath(dest_Dir) || mkpath(dest_Dir)
-        slugs[i] = dest_Dir * relpath(slugs[i], output_Dir)
+        slugs[i] = dest_Dir * slugs[i]
         open("$(slugs[i]).html", "w") do f
             write(f, htmls[i])
         end
